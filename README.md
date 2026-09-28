@@ -69,6 +69,7 @@ Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,93
 Across the full 2019–2022 window, Voltrix generated **$24,045,399** in total Sales across **92,930 orders**, for an overall AOV of **$258.75**. The shape of that trend is a single, dramatic arc: monthly Sales peaked at **$883,406** during the 2020 pandemic-era surge, then declined steadily to a low of **$166,337** by the end of the dataset. Orders followed the same shape, peaking at **3,065** in a single month before falling to **719**.
 
 That decline continued into 2022, Voltrix's weakest year on record: Sales fell to **$4.36M** for the year (-44.1% YoY), Orders to **18,966** (-38.3% YoY), and AOV to **$229.80** (-9.4% YoY). Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders**, not smaller ones — see [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed breakdown.
+
 <img width="1155" height="293" alt="image" src="https://github.com/user-attachments/assets/f04f2e0d-becd-4d60-9482-2affc41906a8" />
 
 ## Monthly & Yearly Growth Rates
@@ -84,6 +85,9 @@ Voltrix's growth followed a clear boom-bust pattern: explosive expansion in 2020
 The yearly figures smooth over real month-to-month swings that a stakeholder should know about:
 * Sales' single best month was **+50.32%** YoY (mid-2020), and its worst was **-34.50%** YoY (late 2022) — even the "good" year of 2020 wasn't a smooth ride.
 * AOV tells a different story: its sharpest jump (**+17.86%**) and its sharpest drop (**-16.45%**) both occur within a few months of each other in **late 2022** — not a steady trend in either direction, but a sign of real volatility in a shrinking order base during that stretch.
+
+<img width="642" height="697" alt="image" src="https://github.com/user-attachments/assets/168cbc5a-99da-4cb7-9ecf-9c553432f22d" /><img width="639" height="693" alt="image" src="https://github.com/user-attachments/assets/0feeff78-6e9d-43d5-82b1-0388b2bbb8a5" />
+
 
 ## Loyalty Program Performance & Recommendation
 
