@@ -1,58 +1,35 @@
-# Voltrix: E-Commerce Revenue, Growth & Loyalty Analytics
+<div align="center">
+<article style="max-width: 800px; text-align: left; border: 1px solid #d0d7de; border-radius: 6px; padding: 32px; margin: 20px 0; background-color: #ffffff; color: #24292f; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
 
-A Tableau analytics project analyzing sales performance, YoY/MoM revenue growth, loyalty program effectiveness, and refund trends for Voltrix, a global consumer electronics retailer.
-
-🔗 [View the live dashboard on Tableau Public](https://public.tableau.com/app/profile/jonan.doan/viz/VoltrixsE-commerceTrendAnalysis/VoltrixsE-CommercePerformanceOverview)
+# Voltrix Ecommerce Performance Report
 
 ---
+## Client Background
 
-## Voltrix Data
+  
+Founded in 2018, **Voltrix** is an e-commerce company that sells popular consumer electronics and has since expanded to a global customer base. The company sells products through its website and mobile app, leveraging a variety of marketing channels to reach customers, including email campaigns, SEO, and affiliate links. Over the last few years, its most popular product lines have come from Apple, Samsung, and ThinkPad.
 
-The underlying relational database consists of four tables — `orders`, `customers`, `order_status`, and `geo_lookup` — joined on customer and order IDs:
+Voltrix serves **88,000 customers** across North America, EMEA, APAC, and LATAM, recording **over 108,000 transactions** and generating over **$24 million** in total sales revenue.
 
-![ER diagram showing orders, customers, order_status, and geo_lookup tables](assets/erd.png)
-<!-- TODO: add erd.png to an assets/ folder in the repo -->
+In partnership with Angie, Voltrix’s Head of Operations, this in-depth analysis evaluates performance from 2019 to 2022. This comprehensive review highlights critical pain points across sales trends, product performance, regional demand, and loyalty program engagement, offering stakeholders actionable insights to optimize market positioning and drive commercial growth. The resulting insights and strategic recommendations target four core pillars:
 
-For analysis, these were flattened into a single order-line-level table, `orders_data_cleaned`, with **108,127 rows** and **23 columns**, spanning **2019–2022**. Each row represents one product within an order, so a multi-item order spans multiple rows.
-
-**Data note:** despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
-
-## Tech Stack & Tools
-* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
-* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
-* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
-* **Documentation:** GitHub / Markdown
-
-## Overview
-
-Founded in 2018, Voltrix is an e-commerce company that sells popular electronics products and has since expanded to a global customer base. Like most e-commerce companies, Voltrix sells products through its online site as well as through its mobile app, and uses a variety of marketing channels to reach customers — including email campaigns, SEO, and affiliate links. Over the last few years, its most popular products have come from Apple, Samsung, and ThinkPad.
-
-This project is framed around a real-style stakeholder request. I'm playing the role of a data analyst partnering with Angie, Voltrix's Head of Operations, ahead of a company-wide town hall:
-
-> **Subject:** Town hall next month - data requests
-> **From:** Angie \<angie@voltrix.com\>
->
-> Hi data team - the leadership team is preparing for the company-wide town hall next month and would like to present a walkthrough of our order trends from 2019-2022. Can you help us answer the following:
-> - What were the overall trends in sales during this time?
-> - What were our monthly and yearly growth rates?
-> - How is the new loyalty program performing? Should we keep using it?
-> - What were our refund rates and average order value?
->
-> I'll set a meeting next week to review your findings - looking forward to discussing.
->
-> Thank you,
-> Angie
-> *Head of Operations, Voltrix*
-
-**Why I built this:** I picked this project to explore my own data analysis process — from data cleaning, to exploratory analysis, to a final deliverable — end to end. It's meant to be a portfolio piece that reflects how I actually work through a project, not just one isolated skill.
-
-*(Note: this uses a synthetic practice dataset and a fictionalized company/stakeholder scenario.)*
-
-## Key Business Objectives
 * **Revenue Trends & Growth Rate:** Track Voltrix's sales trajectory, monthly and yearly growth rates, and average order value (AOV) from 2019–2022.
 * **Loyalty Program Impact:** Evaluate whether Voltrix's loyalty program is performing well enough to justify continued investment.
 * **Refund Rates & AOV:** Understand refund rate trends and how they relate to average order value.
-* **Regional & Product Performance:** Identify which products and regions are driving sales (and refunds), as a starting point for deeper investigation by product and marketing teams.
+* **Regional & Product Performance:** Identify which products and regions are driving sales (and refunds), as a starting point for deeper analysis.
+
+---
+  
+## Dataset Structure and ERD (Entity relationship diagram)
+
+The underlying relational database consists of four tables (`orders`, `customers`, `order_status`, and `geo_lookup`) joined on customer and order IDs:
+
+<img width="685" height="402" alt="image" src="https://github.com/user-attachments/assets/11adcf7b-0059-4b46-aaa3-458fe4e52cce" />
+
+
+There are **108,127 rows** and **23 columns**, spanning **2019–2022**. Each row represents one product within an order, so a multi-item order spans multiple rows.
+
+> **Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
 
 ## Executive Summary
 
