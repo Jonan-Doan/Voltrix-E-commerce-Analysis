@@ -44,6 +44,12 @@ For analysis, these were flattened into a single order-line-level table, `orders
 
 **Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
 
+## Tech Stack & Tools
+* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
+* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
+* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
+* **Documentation:** GitHub / Markdown
+  
 ## Executive Summary
 
 Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,930 orders**, for an overall AOV of **$258.75**.
@@ -57,7 +63,7 @@ Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,93
 
 ## Overall Sales Trends
 
-Sales, Orders, and AOV all peaked in 2020 and have declined every year since — 2022 was the steepest drop, driven mainly by fewer orders rather than smaller ones.
+Sales, Orders, and AOV all peaked in 2020 and have declined every year since. 2022 was the steepest drop, driven mainly by fewer orders rather than smaller ones.
 <div align = "center">
   
 | Metric | All-Time Total | Monthly Peak | Monthly Low | 2022 (YoY Change) |
