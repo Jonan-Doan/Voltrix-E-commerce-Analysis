@@ -66,7 +66,8 @@ Sales, Orders, and AOV all peaked in 2020 and have declined every year since —
 | Orders | 92,930 | 3,065 | 719 | 18,966 (-38.3%) |
 | AOV | $258.75 | $320.05 | $216.99 | $229.80 (-9.4%) |
 
-<img width="1149" height="404" alt="image" src="https://github.com/user-attachments/assets/6c887cbb-8562-4905-acd2-17198d8b63a8" />
+<img width="1147" height="402" alt="image" src="https://github.com/user-attachments/assets/52935810-c287-4373-9d2e-05e2e5f7b2f3" />
+
 
 
 
