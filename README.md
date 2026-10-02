@@ -1,9 +1,9 @@
 <div align="center">
-<article style="max-width: 800px; text-align: left; border: 1px solid #d0d7de; border-radius: 6px; padding: 32px; margin: 20px 0; background-color: #ffffff; color: #24292f; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+
 
 # Voltrix Ecommerce Performance Report
+</div>
 
----
 ## Client Background
 
   
@@ -13,10 +13,12 @@ Voltrix serves **88,000 customers** across North America, EMEA, APAC, and LATAM,
 
 In partnership with Angie, Voltrix’s Head of Operations, this in-depth analysis evaluates performance from 2019 to 2022. This comprehensive review highlights critical pain points across sales trends, product performance, regional demand, and loyalty program engagement, offering stakeholders actionable insights to optimize market positioning and drive commercial growth. The resulting insights and strategic recommendations target four core pillars:
 
+
 * **Revenue Trends & Growth Rate:** Track Voltrix's sales trajectory, monthly and yearly growth rates, and average order value (AOV) from 2019–2022.
 * **Loyalty Program Impact:** Evaluate whether Voltrix's loyalty program is performing well enough to justify continued investment.
 * **Refund Rates & AOV:** Understand refund rate trends and how they relate to average order value.
 * **Regional & Product Performance:** Identify which products and regions are driving sales (and refunds), as a starting point for deeper analysis.
+
 
 ---
   
@@ -24,12 +26,23 @@ In partnership with Angie, Voltrix’s Head of Operations, this in-depth analysi
 
 The underlying relational database consists of four tables (`orders`, `customers`, `order_status`, and `geo_lookup`) joined on customer and order IDs:
 
+<div align="center">
 <img width="685" height="402" alt="image" src="https://github.com/user-attachments/assets/11adcf7b-0059-4b46-aaa3-458fe4e52cce" />
+</div>
 
+For analysis, these were flattened into a single order-line-level table, `orders_data_cleaned`:
 
-There are **108,127 rows** and **23 columns**, spanning **2019–2022**. Each row represents one product within an order, so a multi-item order spans multiple rows.
+<div align="center">
+  
+| | |
+|---|---|
+| Rows | 108,127 |
+| Columns | 23 |
+| Date Range | 2019 – 2022 |
+| Grain | One row per product within an order |
+</div>
 
-> **Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
+**Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
 
 ## Executive Summary
 
@@ -41,13 +54,27 @@ Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,93
 * **Loyalty Members Refund More:** Loyalty program members show a meaningfully higher refund rate than non-members (10.80% vs. 5.71%), a signal worth investigating alongside the program's strong adoption growth.
 * **Data Quality:** ~56K orders (over half the dataset) were missing a Region value, inferred as North America based on currency (99.13% USD/CAD).
 
+
 ## Overall Sales Trends
 
-Across the full 2019–2022 window, Voltrix generated **$24,045,399** in total Sales across **92,930 orders**, for an overall AOV of **$258.75**. The shape of that trend is a single, dramatic arc: monthly Sales peaked at **$883,406** during the 2020 pandemic-era surge, then declined steadily to a low of **$166,337** by the end of the dataset. Orders followed the same shape, peaking at **3,065** in a single month before falling to **719**.
+Sales, Orders, and AOV all peaked in 2020 and have declined every year since — 2022 was the steepest drop, driven mainly by fewer orders rather than smaller ones.
+<div align = "center">
+  
+| Metric | All-Time Total | Monthly Peak | Monthly Low | 2022 (YoY Change) |
+|---|---|---|---|---|
+| Sales | $24,045,399 | $883,406 | $166,337 | $4.36M (-44.1%) |
+| Orders | 92,930 | 3,065 | 719 | 18,966 (-38.3%) |
+| AOV | $258.75 | $320.05 | $216.99 | $229.80 (-9.4%) |
 
-That decline continued into 2022, Voltrix's weakest year on record: Sales fell to **$4.36M** for the year (-44.1% YoY), Orders to **18,966** (-38.3% YoY), and AOV to **$229.80** (-9.4% YoY). Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders**, not smaller ones — see [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed breakdown.
+<img width="1149" height="404" alt="image" src="https://github.com/user-attachments/assets/6c887cbb-8562-4905-acd2-17198d8b63a8" />
 
-<img width="1155" height="293" alt="image" src="https://github.com/user-attachments/assets/f04f2e0d-becd-4d60-9482-2affc41906a8" />
+
+
+</div>
+
+Because AOV held up far better than Sales or Orders in 2022, the decline was driven primarily by **fewer orders**, not smaller ones — see [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed breakdown.
+
+
 
 ## Monthly & Yearly Growth Rates
 
@@ -58,12 +85,23 @@ Voltrix's growth followed a clear boom-bust pattern: explosive expansion in 2020
 * **2021 — Sales -9.6%, AOV -14.94%:** growth reversed off the prior year's high base, the first sign of the slowdown to come.
 * **2022 — Sales -44.1%, AOV -9.44%:** the steepest decline in the dataset. Because AOV fell much less than Sales, the drop was driven mainly by **fewer orders**, not smaller ones.
 
+<div align = "center">
+  
+<img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/57514196-3de0-4e33-9e3d-d067c289a667" />
+
+
+</div>
+
 ### Monthly Volatility
 The yearly figures smooth over real month-to-month swings that a stakeholder should know about:
 * Sales' single best month was **+50.32%** YoY (mid-2020), and its worst was **-34.50%** YoY (late 2022) — even the "good" year of 2020 wasn't a smooth ride.
 * AOV tells a different story: its sharpest jump (**+17.86%**) and its sharpest drop (**-16.45%**) both occur within a few months of each other in **late 2022** — not a steady trend in either direction, but a sign of real volatility in a shrinking order base during that stretch.
 
-<img width="642" height="697" alt="image" src="https://github.com/user-attachments/assets/168cbc5a-99da-4cb7-9ecf-9c553432f22d" /><img width="639" height="693" alt="image" src="https://github.com/user-attachments/assets/0feeff78-6e9d-43d5-82b1-0388b2bbb8a5" />
+<div align = "center">
+  
+<img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/78b2354f-90d6-40c7-816f-97d6b8cf18e6" />
+
+</div>
 
 
 ## Loyalty Program Performance & Recommendation
