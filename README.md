@@ -1,6 +1,3 @@
-<div align="center">
-
-
 # Voltrix Ecommerce Performance Report
 </div>
 
@@ -63,34 +60,43 @@ Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,93
 
 ## Overall Sales Trends
 
-Sales, Orders, and AOV all peaked in 2020 and have declined every year since. 2022 was the steepest drop, driven mainly by fewer orders rather than smaller ones.
+Voltrix's Sales, Orders, and AOV all peaked in 2020 **(pandemic-era surge)** and have declined every year since, showing a dramatic arc rather than steady growth.
+* Monthly Sales peaked at **$883,406**, then declined to **$166,337** by the close of the period
+* Monthly Orders peaked at **3,065** , then declined to **719** by the close of the period.
+* Monthly AOV peaked at **$320.05**, then declined to **$216.99** by the close of the period
+
 <div align = "center">
-  
-| Metric | All-Time Total | Monthly Peak | Monthly Low | 2022 (YoY Change) |
-|---|---|---|---|---|
-| Sales | $24,045,399 | $883,406 | $166,337 | $4.36M (-44.1%) |
-| Orders | 92,930 | 3,065 | 719 | 18,966 (-38.3%) |
-| AOV | $258.75 | $320.05 | $216.99 | $229.80 (-9.4%) |
 
 <img width="1147" height="402" alt="image" src="https://github.com/user-attachments/assets/52935810-c287-4373-9d2e-05e2e5f7b2f3" />
 
+</div>
 
+That decline carried into 2022, Voltrix's weakest year on record.
 
+* Sales fell to **$4.36M (-44.1% YoY)**
+* AOV slipped only modestly to **$229.80 (-9.4% YoY)**
+* Orders dropped to **18,966 (-38.3% YoY)**
+
+<div align = "center">
+  
+<img width="1152" height="93" alt="image" src="https://github.com/user-attachments/assets/7341f288-6d19-47f6-b945-c03f8979c12e" />
 
 </div>
 
-Because AOV held up far better than Sales or Orders in 2022, the decline was driven primarily by **fewer orders**, not smaller ones — see [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed breakdown.
-
+Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders** rather than smaller ones—a distinction worth noting, since it points to a demand or retention problem rather than a pricing one. See [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed year-by-year and month-by-month breakdown.
 
 
 ## Monthly & Yearly Growth Rates
 
-Voltrix's growth followed a clear boom-bust pattern: explosive expansion in 2020, a cooling-off 2021, and a sharp pullback in 2022.
+**TL;DR:** 2020 was explosive growth, 2021 cooled off, and 2022 fell sharply — and the monthly view reveals real volatility that the yearly numbers smooth over.
 
 ### Yearly Growth Rate (YoY)
-* **2020 — Sales +164.6%, AOV +30.88%:** a pandemic-era demand surge, with order volume growing even faster than AOV, suggesting the growth was driven primarily by more people buying rather than bigger baskets.
-* **2021 — Sales -9.6%, AOV -14.94%:** growth reversed off the prior year's high base, the first sign of the slowdown to come.
-* **2022 — Sales -44.1%, AOV -9.44%:** the steepest decline in the dataset. Because AOV fell much less than Sales, the drop was driven mainly by **fewer orders**, not smaller ones.
+
+| Year | Sales YoY | AOV YoY | What's Happening |
+|---|---|---|---|
+| 2020 | +164.6% | +30.88% | Pandemic-era demand surge — growth driven by order volume, not bigger baskets |
+| 2021 | -9.6% | -14.94% | Growth reverses off 2020's high base |
+| 2022 | -44.1% | -9.44% | Steepest decline — driven by fewer orders, not a falling AOV |
 
 <div align = "center">
   
@@ -100,26 +106,39 @@ Voltrix's growth followed a clear boom-bust pattern: explosive expansion in 2020
 </div>
 
 ### Monthly Volatility
-The yearly figures smooth over real month-to-month swings that a stakeholder should know about:
-* Sales' single best month was **+50.32%** YoY (mid-2020), and its worst was **-34.50%** YoY (late 2022) — even the "good" year of 2020 wasn't a smooth ride.
-* AOV tells a different story: its sharpest jump (**+17.86%**) and its sharpest drop (**-16.45%**) both occur within a few months of each other in **late 2022** — not a steady trend in either direction, but a sign of real volatility in a shrinking order base during that stretch.
 
-<div align = "center">
-  
-<img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/78b2354f-90d6-40c7-816f-97d6b8cf18e6" />
+| Metric | Best Month (YoY) | Worst Month (YoY) |
+|---|---|---|
+| Sales | +50.32% (mid-2020) | -34.50% (late 2022) |
+| AOV | +17.86% (late 2022) | -16.45% (late 2022) |
 
-</div>
+AOV's best *and* worst months both land in late 2022, within a few months of each other, a sign of real volatility in a shrinking order base, not a steady trend in either direction.
 
 
 ## Loyalty Program Performance & Recommendation
 
-Because the loyalty program is genuinely new, the data shows an adoption story rather than a static comparison. Loyalty members start from almost nothing in 2019 (30 orders, $4,728 in sales) against an already-established Non-Loyalty base (peaking at 1,927 orders and $636,741 in monthly sales in 2020). By 2021, Loyalty program orders and sales overtake Non-Loyalty, and stay higher through 2022 as both segments decline together in the broader downturn.
+**TL;DR:** Loyalty adoption grew from near-zero to overtaking Non-Loyalty customers by 2021 (a real growth story), but members refund at nearly double the rate, concentrated in one product.
 
-On a per-order basis, Non-Loyalty customers have historically spent more — AOV peaked at $378.19 for Non-Loyalty vs. just $130.49 for Loyalty members early on, though that gap narrows considerably by 2022. Product mix explains part of this: Loyalty purchases are heavily concentrated in one product (58.17% Apple AirPods), while Non-Loyalty customers spread across both ends of the price spectrum — 31.32% on the low-cost Samsung Charging Cable Pack and a combined 8.29% on MacBook Air and ThinkPad laptops, versus just 3.56% for Loyalty. Non-Loyalty's higher AOV isn't simply "bigger spenders" — it's a basket mix that includes more high-ticket laptops.
+Loyalty started from almost nothing in 2019 (30 orders and $4,728 in Sales) and grew steadily enough to **overtake Non-Loyalty customers** in both order volume and total Sales by 2021, a strong trajectory for a program that young.
 
-One caution worth flagging: Loyalty program members show a meaningfully higher refund rate than non-members (10.80% vs. 5.71%, within the reliable refund-tracking window — see [Refund Rates & AOV](#refund-rates--aov)).
+<div align = 'center'>
+  
+<img width="1146" height="228" alt="image" src="https://github.com/user-attachments/assets/fcd91419-ff61-4573-9dc7-13ea678690ac" />
+</div>
 
-**Verdict: Keep investing in the loyalty program.** Its adoption curve is a real growth story — overtaking Non-Loyalty customers in both order volume and total sales within about two years of launching from a near-zero base. That said, the elevated refund rate among members is worth investigating before scaling further — worth checking whether it's concentrated in the AirPods purchases that dominate their basket, given how heavily loyalty members over-index on that one product.
+
+That growth comes with a trade-off in basket composition. Loyalty's purchases are unusually concentrated in one product **(Apple AirPods)**, which make up 58.17% of all Loyalty orders, while Non-Loyalty's basket is split more evenly across three: AirPods (34.98%), Samsung Charging Cable Pack (31.32%), and a 27in 4K gaming monitor (22.58%).
+
+<div align = 'center'>
+<img width="578" height="195" alt="image" src="https://github.com/user-attachments/assets/81aa112d-abc5-4eb6-b80f-49d5f3be7f13" />
+
+<img width="1155" height="200" alt="image" src="https://github.com/user-attachments/assets/23325438-3bfc-4285-9c52-2c894ded12dc" />
+
+</div>
+
+The refund-count trend tells the same story the rate does, with one caveat: Loyalty refunds climbed sharply through 2021 (peaking at 254 in a single month) before falling back to near-zero by the end of the dataset. That drop **isn't a real recovery**. It lines up with the same refund-tracking cutoff noted in [Data Quality & Limitations](#data-quality--limitations), so the reliable comparison window for this metric is 2019–2021, not the full period.
+
+**Verdict: Keep investing in the loyalty program.** Its adoption curve is a real growth story, overtaking Non-Loyalty customers in both order volume and total sales within about two years of launching from a near-zero base. That said, the elevated refund rate among members is worth investigating before scaling further, especially given how concentrated their basket is in a single product (AirPods).
 
 ## Refund Rates & AOV
 
