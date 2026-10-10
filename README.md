@@ -1,4 +1,8 @@
+<div align = 'center'>
+  
 # Voltrix Ecommerce Performance Report
+<img width="500" height="250" alt="Primary lockup, dark@1x" src="https://github.com/user-attachments/assets/54fd4fe5-b9e5-4435-afcb-5ad61cbc8b3b" />
+
 </div>
 
 ## Client Background
@@ -132,11 +136,13 @@ That growth comes with a trade-off in basket composition. Loyalty's purchases ar
 <div align = 'center'>
 <img width="578" height="195" alt="image" src="https://github.com/user-attachments/assets/81aa112d-abc5-4eb6-b80f-49d5f3be7f13" />
 
-<img width="1155" height="200" alt="image" src="https://github.com/user-attachments/assets/23325438-3bfc-4285-9c52-2c894ded12dc" />
-
 </div>
 
-The refund-count trend tells the same story the rate does, with one caveat: Loyalty refunds climbed sharply through 2021 (peaking at 254 in a single month) before falling back to near-zero by the end of the dataset. That drop **isn't a real recovery**. It lines up with the same refund-tracking cutoff noted in [Data Quality & Limitations](#data-quality--limitations), so the reliable comparison window for this metric is 2019–2021, not the full period.
+Loyalty's refund rate ran above Non-Loyalty's for most of 2019–2021, peaking around **15%** compared to Non-Loyalty's peak of about **8%**, before both declined to near-zero. That drop **isn't a real recovery**. Recorded refund rates fall to zero starting **July 2021**, the same tracking cutoff noted in [Data Quality & Limitations](#data-quality--limitations), so the reliable comparison window for this metric runs through **July 2021**, not the full dataset period.
+
+<div align = 'center'>
+  <img width="1154" height="357" alt="image" src="https://github.com/user-attachments/assets/0d92c965-bdbd-4192-8bcb-8d7b0085e120" />
+</div>
 
 **Verdict: Keep investing in the loyalty program.** Its adoption curve is a real growth story, overtaking Non-Loyalty customers in both order volume and total sales within about two years of launching from a near-zero base. That said, the elevated refund rate among members is worth investigating before scaling further, especially given how concentrated their basket is in a single product (AirPods).
 
