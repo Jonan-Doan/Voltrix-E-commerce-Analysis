@@ -147,8 +147,47 @@ Loyalty's refund rate ran above Non-Loyalty's for most of 2019–2021, peaking a
 **Verdict: Keep investing in the loyalty program.** Its adoption curve is a real growth story, overtaking Non-Loyalty customers in both order volume and total sales within about two years of launching from a near-zero base. That said, the elevated refund rate among members is worth investigating before scaling further, especially given how concentrated their basket is in a single product (AirPods).
 
 ## Refund Rates & AOV
+**TL;DR:** The true refund rate is **7.59%**, not the 5.06% the full dataset shows; a data-tracking cutoff after July 2021 silently zeroed out refunds. Higher-priced products, Loyalty members, and untracked marketing channels all refund proportionally more.
 
-## Region & Product Mix
+> REFUNDED data goes flat to 0% for every month from August 2021 onward, while order volume continues normally through the same period. This is a data-logging cutoff, not a real drop in refunds. Every figure below uses the **clean window (Jan 2019 – Jul 2021)** instead. I confirmed this cutoff hits every segment equally (loyalty, channel, and region all drop to zero at the same point), ruling out an isolated issue.
+
+<div align = "center">
+  
+<img width="557" height="281" alt="image" src="https://github.com/user-attachments/assets/1434c252-349b-486f-a5be-f39c500ac2de" />
+
+</div>
+
+### By Product
+
+<div align = "center">
+  
+<img width="576" height="237" alt="image" src="https://github.com/user-attachments/assets/dd26dd9e-cc39-444e-a155-00d153f9503a" />
+
+
+</div>
+
+Throughout the years, the refund rate has increased alongside the price point. Voltrix's two highest-AOV products (ThinkPad, MacBook Air) have by far the highest refund rates, which matters financially since a refunded laptop is a much bigger revenue hit than a refunded accessory.
+
+### By Marketing Channel
+
+<div align = "center">
+ 
+<img width="1163" height="351" alt="image" src="https://github.com/user-attachments/assets/6539816d-e1df-470a-9470-4329e6f2f592" />
+
+</div>
+
+This analysis demonstrates how **order volume** across marketing channels **shapes refund growth rates**. For instance, Direct drives the highest order volume of any channel, yet maintains one of the lowest refund rates (7.57% average rate), proving that scale alone does not make a channel riskier. In contrast, **low-volume channels** are highly susceptible to **statistical volatility**. For example, “Unknown” (which isn’t a true marketing channel) spiked to a 100% refund rate in several months; because it contains only a handful of orders, **a single refund drastically swings the percentage**. Social Media generates the second-highest overall refund rate but obscures similar monthly volatility, peaking at ~24%. This spike likely reflects the same **low-volume distortion** rather than a fundamental shift in customer behavior.
+
+### By Purchase Platform
+
+<div align = "center">
+ 
+<img width="1188" height="355" alt="image" src="https://github.com/user-attachments/assets/4e8ee13a-152f-4711-98cc-98579d246c9e" />
+
+
+</div>
+
+Website's refund rate climbs steadily across the period, reaching a peak of 11% in 2021, while Mobile App runs choppier — swinging between near-0% and sharp spikes, including one that briefly crossed above Website's level in January 2020. That volatility tracks with order volume: Mobile App sat at just 65 orders a month for most of 2019 while Website was already above 1,000, a roughly 20x gap in the exact window where Mobile's rate swings hardest.
 
 ### Product Mix
 
