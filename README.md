@@ -50,12 +50,6 @@ That decline carried into 2022, Voltrix's weakest year on record.
 * AOV slipped only modestly to **$229.80 (-9.4% YoY)**
 * Orders dropped to **18,966 (-38.3% YoY)**
 
-<div align = "center">
-  
-<img width="1152" height="93" alt="image" src="https://github.com/user-attachments/assets/7341f288-6d19-47f6-b945-c03f8979c12e" />
-
-</div>
-
 Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders** rather than smaller ones—a distinction worth noting, since it points to a demand or retention problem rather than a pricing one. See [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed year-by-year and month-by-month breakdown.
 
 
@@ -176,12 +170,6 @@ The website's refund rate climbs steadily over the period, peaking at 11% in 202
 <div/>
   
 **High-ticket items** are bought almost exclusively on **desktop/website**, while **low-cost accessories** drive **mobile app order volume**, directly actionable for where to invest conversion-optimization effort. MacBook Air and ThinkPad laptops, despite their small order-volume share, also carry Voltrix's highest refund rates (17.42% / 17.60% — see [Refund Rates & AOV](#refund-rates--aov)), reinforcing that these low-volume, high-ticket items warrant closer quality attention relative to their revenue contribution.
-
-<div align = 'center'>
-  
-<img width="1174" height="554" alt="image" src="https://github.com/user-attachments/assets/fb7c501a-2e57-4f76-af26-bbb1f9bc2d93" />
-
-<div/>
   
 **Samsung Webcam's appearance** in the order mix is a **clean launch signal**: it sits at effectively zero before February 2020, debuts that month with 9 orders (0.55% of total Orders), and its share grows steadily afterward, consistent with a new product introduction rather than a seasonal blip in an existing SKU.
 
