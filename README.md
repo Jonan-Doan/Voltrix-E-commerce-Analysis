@@ -208,6 +208,12 @@ The website's refund rate climbs steadily over the period, peaking at 11% in 202
   
 **High-ticket items** are bought almost exclusively on **desktop/website**, while **low-cost accessories** drive **mobile app order volume**, directly actionable for where to invest conversion-optimization effort. MacBook Air and ThinkPad laptops, despite their small order-volume share, also carry Voltrix's highest refund rates (17.42% / 17.60% — see [Refund Rates & AOV](#refund-rates--aov)), reinforcing that these low-volume, high-ticket items warrant closer quality attention relative to their revenue contribution.
 
+<div align = 'center'>
+  
+<img width="1174" height="554" alt="image" src="https://github.com/user-attachments/assets/fb7c501a-2e57-4f76-af26-bbb1f9bc2d93" />
+
+<div/>
+  
 **Samsung Webcam's appearance** in the order mix is a **clean launch signal**: it sits at effectively zero before February 2020, debuts that month with 9 orders (0.55% of total Orders), and its share grows steadily afterward, consistent with a new product introduction rather than a seasonal blip in an existing SKU.
 
 Apple AirPods accounts for the clear majority of order volume throughout the period, by a wide margin over every other product. **Samsung Charging Cable Pack's** share grows noticeably over the course of the dataset, at points **rivaling the Gaming Monitor's share**; the ranking between the two isn't constant across the whole period.
@@ -232,11 +238,20 @@ Share of Sales tells a more dynamic story than a single snapshot suggests. **The
 | APAC | 3rd highest | 3rd highest | 7.36% |
 | LATAM | Smallest | Smallest | 6.55% |
 
-![Sales, AOV, and Orders by Region over time](assets/region-performance.png)
+<img width="1161" height="308" alt="image" src="https://github.com/user-attachments/assets/f335517e-c28e-44ba-ab05-7692a2db4e2a" />
 
 <div/>
 
-North America is Voltrix's largest region by a wide margin, consistent with the ~56K orders, with a missing Region value being inferred as North American (see [Data Quality & Limitations](#data-quality--limitations)). AOV is far more uniform across regions than Sales or Orders, suggesting regional differences come mostly from order volume, not different spending habits. Refund rate also shows comparatively little regional spread in aggregate (a 1.6-point range) — much tighter than the gaps seen by loyalty program or marketing channel. That tight range hides real month-to-month noise, though: LATAM's refund rate swings from a spike near 11% to a crash to 0% within a couple of months in 2019, while North America's line stays comparatively smooth throughout. That lines up with order volume — LATAM runs as low as 35 orders a month by the end of the period versus North America's peak of 1,588 — so the smaller region's rate is far more exposed to a single refund moving the needle.
+**North America** is **Voltrix's largest region** by a wide margin, consistent with the **~56K orders**, with a missing Region value being inferred as North American (see [Data Quality & Limitations](#data-quality--limitations)). **AOV** is far more **uniform across regions** than Sales or Orders, suggesting **regional differences come mostly from order volume**, not different spending habits. 
+
+<div align = 'center'>
+  
+<img width="1162" height="350" alt="image" src="https://github.com/user-attachments/assets/2fe01bb4-12e3-473e-b061-70dcc90b1f99" />
+
+<div/>
+
+**Refund rate** also shows comparatively **little regional spread** in aggregate (a 1.6-point range), much tighter than the gaps seen by loyalty program or marketing channel. That tight range hides real month-to-month noise, though: **LATAM's refund rate** swings from a **spike near 11% to a crash to 0%** within a couple of months in 2019, while **North America's** line stays comparatively **smooth throughout**. That **lines up with order volume**: LATAM runs as low as 35 orders a month by the end of the period versus North America's peak of 1,588, so the smaller region's rate is far more exposed to a single refund moving the needle.
+
 ## Data Quality & Limitations
 
 ## Strategic Recommendations
