@@ -20,37 +20,6 @@ In partnership with Angie, Voltrix’s Head of Operations, this in-depth analysi
 * **Refund Rates & AOV:** Understand refund rate trends and how they relate to average order value.
 * **Regional & Product Performance:** Identify which products and regions are driving sales (and refunds), as a starting point for deeper analysis.
 
-
----
-  
-## Dataset Structure and ERD (Entity relationship diagram)
-
-The underlying relational database consists of four tables (`orders`, `customers`, `order_status`, and `geo_lookup`) joined on customer and order IDs:
-
-<div align="center">
-<img width="685" height="402" alt="image" src="https://github.com/user-attachments/assets/11adcf7b-0059-4b46-aaa3-458fe4e52cce" />
-</div>
-
-For analysis, these were flattened into a single order-line-level table, `orders_data_cleaned`:
-
-<div align="center">
-  
-| | |
-|---|---|
-| Rows | 108,127 |
-| Columns | 23 |
-| Date Range | 2019 – 2022 |
-| Grain | One row per product within an order |
-</div>
-
-**Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
-
-## Tech Stack & Tools
-* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
-* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
-* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
-* **Documentation:** GitHub / Markdown
-  
 ## Executive Summary
 
 Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,930 orders**, for an overall AOV of **$258.75**.
@@ -266,6 +235,35 @@ The workbook is organized into four dashboards, connected by a persistent naviga
 2. **Deep Dive: Product Mix** — a 100%-stacked view of Sales/Orders share by product, plus purchase-platform and loyalty breakdowns.
 3. **Deep Dive: Refund Rate** — refund rate overall and broken down by loyalty status, purchase platform, marketing channel, and product, with a visible callout for the refund-tracking data gap.
 4. **Deep Dive: Region** — Sales/AOV/Orders and refund rate broken down by geographic region, including a transparent note on how orders with missing region data were handled.
+
+## Dataset Structure and ERD (Entity relationship diagram)
+
+The underlying relational database consists of four tables (`orders`, `customers`, `order_status`, and `geo_lookup`) joined on customer and order IDs:
+
+<div align="center">
+<img width="685" height="402" alt="image" src="https://github.com/user-attachments/assets/11adcf7b-0059-4b46-aaa3-458fe4e52cce" />
+</div>
+
+For analysis, these were flattened into a single order-line-level table, `orders_data_cleaned`:
+
+<div align="center">
+  
+| | |
+|---|---|
+| Rows | 108,127 |
+| Columns | 23 |
+| Date Range | 2019 – 2022 |
+| Grain | One row per product within an order |
+</div>
+
+**Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
+
+## Tech Stack & Tools
+* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
+* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
+* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
+* **Documentation:** GitHub / Markdown
+  
 
 ## Repo Contents
 
