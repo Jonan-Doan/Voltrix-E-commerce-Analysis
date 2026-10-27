@@ -187,12 +187,56 @@ This analysis demonstrates how **order volume** across marketing channels **shap
 
 </div>
 
-Website's refund rate climbs steadily across the period, reaching a peak of 11% in 2021, while Mobile App runs choppier — swinging between near-0% and sharp spikes, including one that briefly crossed above Website's level in January 2020. That volatility tracks with order volume: Mobile App sat at just 65 orders a month for most of 2019 while Website was already above 1,000, a roughly 20x gap in the exact window where Mobile's rate swings hardest.
+The website's refund rate climbs steadily over the period, peaking at 11% in 2021, while the Mobile App runs choppy, swinging between near-0% and sharp spikes, including one that briefly crossed above the Website's level in January 2020. That **volatility tracks with order volume**: Mobile App sat at just 65 orders a month for most of 2019 while Website was already above 1,000, **a roughly 20x gap** in the exact window where Mobile's rate swings hardest.
 
 ### Product Mix
+**TL;DR:** The Gaming Monitor and AirPods drive revenue; AirPods and a low-cost charging cable drive order volume. High-ticket items sell on desktop, accessories sell on mobile. North America is by far the largest region, but refund rates vary little by region.
+
+<div align = 'center'>
+  
+| Product | Share of Sales | Share of Orders | Platform Skew |
+|---|---|---|---|
+| 27in 4K Gaming Monitor | ~35–40% (largest) | ~20% | 25.91% website / 0.70% mobile |
+| Apple AirPods Headphones | ~25–30% | ~45–50% (largest) | 52.04% website / 10.16% mobile |
+| MacBook Air Laptop | Moderate | Low | 4.38% website / 0.04% mobile |
+| ThinkPad Laptop | Moderate | Low | 3.22% website / 0% mobile |
+| Samsung Charging Cable Pack | Low | High | 13.96% website / 51.63% mobile |
+| Samsung Webcam | Low | Moderate | 0.18% website / 37.31% mobile |
+
+<img width="534" height="184" alt="image" src="https://github.com/user-attachments/assets/392bc286-bf59-49b2-81f1-b575e5097e89" />
+<div/>
+  
+**High-ticket items** are bought almost exclusively on **desktop/website**, while **low-cost accessories** drive **mobile app order volume**, directly actionable for where to invest conversion-optimization effort. MacBook Air and ThinkPad laptops, despite their small order-volume share, also carry Voltrix's highest refund rates (17.42% / 17.60% — see [Refund Rates & AOV](#refund-rates--aov)), reinforcing that these low-volume, high-ticket items warrant closer quality attention relative to their revenue contribution.
+
+**Samsung Webcam's appearance** in the order mix is a **clean launch signal**: it sits at effectively zero before February 2020, debuts that month with 9 orders (0.55% of total Orders), and its share grows steadily afterward, consistent with a new product introduction rather than a seasonal blip in an existing SKU.
+
+Apple AirPods accounts for the clear majority of order volume throughout the period, by a wide margin over every other product. **Samsung Charging Cable Pack's** share grows noticeably over the course of the dataset, at points **rivaling the Gaming Monitor's share**; the ranking between the two isn't constant across the whole period.
+
+<div align = 'center'>
+  
+  <img width="1143" height="572" alt="image" src="https://github.com/user-attachments/assets/20680b48-068c-4992-b7b8-f074db8df7e8" />
+
+<div/>
+
+Share of Sales tells a more dynamic story than a single snapshot suggests. **The 27in 4K Gaming Monitor, Apple AirPods, and MacBook Air Laptop** together account for the **large majority of Sales** throughout the period, but their relative order shifts over time. MacBook Air (Green) clearly overtook AirPods (Orange) in March 2020 (30.22% vs. 23.71% of total Sales, a 6.5-point gap) and drew nearly even again in January 2021 (26.06% vs. 25.47%, essentially a tie, with MacBook Air just barely ahead). It's not yet clear whether this reflects a seasonal pattern, a pricing promotion, or something else, worth investigating with pricing/promotion data if available.
+
 
 ### Region Performance
 
+<div align = 'center'>
+  
+| Region | Sales Peak (monthly) | Orders Peak (monthly) | Refund Rate |
+|---|---|---|---|
+| North America | $484,459 | 1,588 | 8.17% |
+| EMEA | 2nd highest | 2nd highest | 6.91% |
+| APAC | 3rd highest | 3rd highest | 7.36% |
+| LATAM | Smallest | Smallest | 6.55% |
+
+![Sales, AOV, and Orders by Region over time](assets/region-performance.png)
+
+<div/>
+
+North America is Voltrix's largest region by a wide margin, consistent with the ~56K orders, with a missing Region value being inferred as North American (see [Data Quality & Limitations](#data-quality--limitations)). AOV is far more uniform across regions than Sales or Orders, suggesting regional differences come mostly from order volume, not different spending habits. Refund rate also shows comparatively little regional spread in aggregate (a 1.6-point range) — much tighter than the gaps seen by loyalty program or marketing channel. That tight range hides real month-to-month noise, though: LATAM's refund rate swings from a spike near 11% to a crash to 0% within a couple of months in 2019, while North America's line stays comparatively smooth throughout. That lines up with order volume — LATAM runs as low as 35 orders a month by the end of the period versus North America's peak of 1,588 — so the smaller region's rate is far more exposed to a single refund moving the needle.
 ## Data Quality & Limitations
 
 ## Strategic Recommendations
