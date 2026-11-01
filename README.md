@@ -50,37 +50,7 @@ That decline carried into 2022, Voltrix's weakest year on record.
 * AOV slipped only modestly to **$229.80 (-9.4% YoY)**
 * Orders dropped to **18,966 (-38.3% YoY)**
 
-Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders** rather than smaller ones—a distinction worth noting, since it points to a demand or retention problem rather than a pricing one. See [Monthly & Yearly Growth Rates](#monthly--yearly-growth-rates) for the detailed year-by-year and month-by-month breakdown.
-
-
-## Monthly & Yearly Growth Rates
-
-**TL;DR:** 2020 was explosive growth, 2021 cooled off, and 2022 fell sharply — and the monthly view reveals real volatility that the yearly numbers smooth over.
-
-### Yearly Growth Rate (YoY)
-
-| Year | Sales YoY | AOV YoY | What's Happening |
-|---|---|---|---|
-| 2020 | +164.6% | +30.88% | Pandemic-era demand surge — growth driven by order volume, not bigger baskets |
-| 2021 | -9.6% | -14.94% | Growth reverses off 2020's high base |
-| 2022 | -44.1% | -9.44% | Steepest decline — driven by fewer orders, not a falling AOV |
-
-<div align = "center">
-  
-<img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/57514196-3de0-4e33-9e3d-d067c289a667" />
-
-
-</div>
-
-### Monthly Volatility
-
-| Metric | Best Month (YoY) | Worst Month (YoY) |
-|---|---|---|
-| Sales | +50.32% (mid-2020) | -34.50% (late 2022) |
-| AOV | +17.86% (late 2022) | -16.45% (late 2022) |
-
-AOV's best *and* worst months both land in late 2022, within a few months of each other, a sign of real volatility in a shrinking order base, not a steady trend in either direction.
-
+Because AOV held up far better than Sales or Orders, the 2022 decline was driven primarily by **fewer orders** rather than smaller ones—a distinction worth noting, since it points to a demand or retention problem rather than a pricing one.
 
 ## Loyalty Program Performance & Recommendation
 
