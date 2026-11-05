@@ -184,14 +184,12 @@ Share of Sales tells a more dynamic story than a single snapshot suggests. **The
 
 | # | Recommendation | Why It Matters | Owner |
 |---|---|---|---|
-| 1 | Launch reactivation campaigns targeting customers acquired during the 2020 peak; investigate root cause (competition, marketing spend, market conditions). | Sales fell 44.1% YoY in 2022, driven by fewer orders, not a falling AOV | Marketing & Retention |
-| 2 | Keep investing in loyalty acquisition; investigate the drivers behind Loyalty's elevated refund rate before scaling further. | Adoption overtook Non-Loyalty by 2021, but members refund nearly 2x more (10.80% vs. 5.71%) | Loyalty/Retention & Finance |
-| 3 | Prioritize return-reason tracking and fulfillment review for laptop SKUs, where revenue impact per refund is highest. | Laptops carry 17%+ refund rates despite low order volume | Fulfillment & Product Quality |
-| 4 | Use regional and product performance as a starting point for deeper investigation into underperforming regions (EMEA, APAC, LATAM), and prioritize inventory and marketing spend behind the top three products. | North America drives the large majority of Sales and Orders; the Gaming Monitor, AirPods, and MacBook Air lead Sales while AirPods alone leads Orders | Regional Sales & Merchandising |
-| 5 | Prioritize the desktop checkout experience for big-ticket conversion; keep the mobile app frictionless for accessory purchases. | High-ticket items sell on desktop, accessories drive mobile app volume | E-commerce/UX |
-| 6 | Audit the ETL pipeline behind `REFUNDED`; add monitoring alerts for any metric that goes flat to zero for multiple months. | Refund tracking silently dropped to 0% after July 2021 | Data Engineering |
-
-## Data Quality & Limitations
+| 1 | **Launch reactivation campaigns targeting customers acquired during the 2020 peak**; investigate root cause (competition, marketing spend, market conditions). | Sales fell 44.1% YoY in 2022, driven by fewer orders, not a falling AOV | Marketing & Retention |
+| 2 | **Keep investing in loyalty acquisition**; investigate the drivers behind Loyalty's elevated refund rate before scaling further. | Adoption overtook Non-Loyalty by 2021, but members refund nearly 2x more (10.80% vs. 5.71%) | Loyalty/Retention & Finance |
+| 3 | **Prioritize return-reason tracking and fulfillment review for laptop SKUs**, where revenue impact per refund is highest. | Laptops carry 17%+ refund rates despite low order volume | Fulfillment & Product Quality |
+| 4 | **Use regional and product performance as a starting point for deeper investigation into underperforming regions (EMEA, APAC, LATAM)**, and prioritize inventory and marketing spend behind the top three products. | North America drives the large majority of Sales and Orders; the Gaming Monitor, AirPods, and MacBook Air lead Sales while AirPods alone leads Orders | Regional Sales & Merchandising |
+| 5 | **Prioritize the desktop checkout experience for big-ticket conversion**; keep the mobile app frictionless for accessory purchases. | High-ticket items sell on desktop, accessories drive mobile app volume | E-commerce/UX |
+| 6 | **Audit the ETL pipeline behind `REFUNDED`**; add monitoring alerts for any metric that goes flat to zero for multiple months. | Refund tracking silently dropped to 0% after July 2021 | Data Engineering |
 
 ## Dashboard Preview
 
@@ -199,10 +197,13 @@ Share of Sales tells a more dynamic story than a single snapshot suggests. **The
 
 The workbook is organized into four dashboards, connected by a persistent navigation bar:
 
-1. **E-Commerce Performance Overview** — the landing page. Headline KPIs (2022 Sales, AOV, Orders with YoY change) with trend lines underneath, a Loyalty Program / Purchase Platform / Marketing Channel / Region breakdown selector, and click-through access to a Growth Rate view for each KPI.
-2. **Deep Dive: Product Mix** — a 100%-stacked view of Sales/Orders share by product, plus purchase-platform and loyalty breakdowns.
-3. **Deep Dive: Refund Rate** — refund rate overall and broken down by loyalty status, purchase platform, marketing channel, and product, with a visible callout for the refund-tracking data gap.
-4. **Deep Dive: Region** — Sales/AOV/Orders and refund rate broken down by geographic region, including a transparent note on how orders with missing region data were handled.
+| Dashboard | What's On It |
+|---|---|
+| E-Commerce Performance Overview | 2022 KPIs (Sales/AOV/Orders) with YoY change, trend lines, a Loyalty/Platform/Channel/Region breakdown selector, and click-through to Growth Rate views |
+| Deep Dive: Product Mix | 100%-stacked Sales/Orders share by product, plus purchase-platform and loyalty breakdowns |
+| Deep Dive: Refund Rate | Refund rate by loyalty, platform, channel, and product, with a callout for the refund-tracking data gap |
+| Deep Dive: Region | Sales/AOV/Orders and refund rate by region, with a note on the missing-region inference |
+
 
 ## Dataset Structure and ERD (Entity-Relationship Diagram)
 
@@ -225,13 +226,17 @@ For analysis, these were flattened into a single order-line-level table, `orders
 </div>
 
 **Data note:** Despite the "_cleaned" naming, the flattened extract still contained duplicate rows, corrupted identifiers, and missing region values that had to be identified and corrected for — see [Data Quality & Limitations](#data-quality--limitations).
-
-## Tech Stack & Tools
-* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
-* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
-* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
-* **Documentation:** GitHub / Markdown
   
+## Data Quality & Limitations
+
+**TL;DR:** Four real data issues were found and corrected for transparently rather than hidden behind a clean-looking number.
+
+| Issue | Impact If Unaddressed | Resolution |
+|---|---|---|
+| Refund tracking cutoff (Aug 2021+) | Refund rate artificially diluted to 5.06% | Restricted refund analysis to the Jan 2019 – Jul 2021 clean window (7.59%) |
+| ~56K orders missing Region | Region analysis incomplete for over half the dataset | Inferred as North America via currency (99.13% USD/CAD); disclosed as an inference, not fact |
+| 98 corrupted Order IDs | Minor; could affect order-level joins | Flagged for transparency; not excluded from totals |
+| Duplicate Count calculation inconsistency | Small, unresolved discrepancy between two derivations that should mathematically match | Doesn't change the direction of any finding; open item for further investigation |
 
 ## Repo Contents
 
@@ -243,6 +248,11 @@ For analysis, these were flattened into a single order-line-level table, `orders
 | ER diagram | *Coming soon* |
 | Data cleaning file (Excel) | *Coming soon* |
 
+## Tech Stack & Tools
+* **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
+* **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
+* **Data Querying & Exploratory Analysis:** BigQuery (SQL)
+* **Documentation:** GitHub / Markdown
 ---
 
 *This project uses a practice dataset and a fictionalized company/stakeholder scenario for portfolio purposes.*
