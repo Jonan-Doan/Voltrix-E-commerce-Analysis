@@ -24,11 +24,11 @@ In partnership with Angie, Voltrix’s Head of Operations, this in-depth analysi
 
 Between 2019 and 2022, Voltrix generated **$24,045,399** in Sales across **92,930 orders**, for an overall AOV of **$258.75**.
 
-* **Macro Trajectory:** Sharp, pandemic-era growth peaked in mid-2020 (+50.3% YoY in a single month), followed by a sustained decline through 2021 into 2022.
-* **2022 Snapshot:** Sales fell to **$4.36M** (-44.1% YoY), Orders to **18,966** (-38.3% YoY), and AOV to **$229.80** (-9.4% YoY) — the steepest year of decline in the dataset.
-* **Refund Tracking Gap:** Recorded refund rates fall to a flat 0% by late 2021 — a data-logging cutoff, not a real operational win. Within the reliable tracking window, the true refund rate is **7.59%**.
-* **Loyalty Members Refund More:** Loyalty program members show a meaningfully higher refund rate than non-members (10.80% vs. 5.71%), a signal worth investigating alongside the program's strong adoption growth.
-* **Data Quality:** ~56K orders (over half the dataset) were missing a Region value, inferred as North America based on currency (99.13% USD/CAD).
+* **Sales fell 44.1% YoY in 2022**, the steepest drop in the dataset, after a sharp pandemic-fueled peak in 2020 (+164.6% YoY). The decline came mainly from fewer orders, not smaller ones, pointing to a demand problem rather than a pricing one.
+* **Loyalty adoption overtook Non-Loyalty customers by 2021**, a strong growth trajectory for a program that young, but members refund at nearly double the rate (10.80% vs. 5.71%). Verdict: worth continued investment, provided that gap gets investigated before scaling further.
+* **The true refund rate is 7.59%, not the 5.06% the full dataset suggests.** A data-logging cutoff after mid-2021 silently zeroed out refunds. Refund rate also climbs sharply with price: Voltrix's two highest-AOV products (ThinkPad and MacBook Air laptops) carry the highest refund rates (17%+), the biggest revenue hit per return in the catalog.
+* **North America drives the bulk of Sales and Orders**, though AOV stays uniform across regions, so the gap comes from volume, not spending habits. By product, the Gaming Monitor, AirPods, and MacBook Air lead Sales while AirPods alone lead Orders, and purchase behavior splits cleanly by platform: high-ticket items sell on desktop, accessories sell on mobile.
+* **~56K orders (over half the dataset) were missing a Region value**, inferred as North America based on currency (99.13% USD/CAD) and disclosed as an inference, not fact.
 
 
 ## Overall Sales Trends
@@ -64,7 +64,7 @@ Loyalty started from almost nothing in 2019 (30 orders and $4,728 in Sales) and 
 </div>
 
 
-That growth comes with a trade-off in basket composition. Loyalty's purchases are unusually concentrated in one product **(Apple AirPods)**, which make up 58.17% of all Loyalty orders, while Non-Loyalty's basket is split more evenly across three: AirPods (34.98%), Samsung Charging Cable Pack (31.32%), and a 27in 4K gaming monitor (22.58%).
+That growth comes with a trade-off in basket composition. Loyalty's purchases are unusually concentrated in one product **(Apple AirPods)**, which make up 58.17% of all Loyalty orders, while Non-Loyalty's basket is split more evenly across three: **AirPods** (34.98%), **Samsung Charging Cable Pack** (31.32%), and a **27in 4K gaming monitor** (22.58%).
 
 <div align = 'center'>
 <img width="578" height="195" alt="image" src="https://github.com/user-attachments/assets/81aa112d-abc5-4eb6-b80f-49d5f3be7f13" />
@@ -139,7 +139,7 @@ The website's refund rate climbs steadily over the period, peaking at 11% in 202
 <img width="534" height="184" alt="image" src="https://github.com/user-attachments/assets/392bc286-bf59-49b2-81f1-b575e5097e89" />
 <div/>
   
-**High-ticket items** are bought almost exclusively on **desktop/website**, while **low-cost accessories** drive **mobile app order volume**, directly actionable for where to invest conversion-optimization effort. MacBook Air and ThinkPad laptops, despite their small order-volume share, also carry Voltrix's highest refund rates (17.42% / 17.60% — see [Refund Rates & AOV](#refund-rates--aov)), reinforcing that these low-volume, high-ticket items warrant closer quality attention relative to their revenue contribution.
+**High-ticket items** are bought almost exclusively on **desktop/website**, while **low-cost accessories** drive **mobile app order volume**, directly actionable for where to invest conversion-optimization effort. MacBook Air and ThinkPad laptops, despite their small order-volume share, also carry Voltrix's highest refund rates (17.42% / 17.60%. See [Refund Rates & AOV](#refund-rates--aov)), reinforcing that these low-volume, high-ticket items warrant closer quality attention relative to their revenue contribution.
   
 **Samsung Webcam's appearance** in the order mix is a **clean launch signal**: it sits at effectively zero before February 2020, debuts that month with 9 orders (0.55% of total Orders), and its share grows steadily afterward, consistent with a new product introduction rather than a seasonal blip in an existing SKU.
 
@@ -179,9 +179,19 @@ Share of Sales tells a more dynamic story than a single snapshot suggests. **The
 
 **Refund rate** also shows comparatively **little regional spread** in aggregate (a 1.6-point range), much tighter than the gaps seen by loyalty program or marketing channel. That tight range hides real month-to-month noise, though: **LATAM's refund rate** swings from a **spike near 11% to a crash to 0%** within a couple of months in 2019, while **North America's** line stays comparatively **smooth throughout**. That **lines up with order volume**: LATAM runs as low as 35 orders a month by the end of the period versus North America's peak of 1,588, so the smaller region's rate is far more exposed to a single refund moving the needle.
 
-## Data Quality & Limitations
-
 ## Strategic Recommendations
+**TL;DR:** Reversing the 2022 decline through customer reactivation is the single highest-leverage move. Loyalty investment and laptop quality control follow close behind, since both have real dollar impact. At the same time, the data-pipeline fix matters for long-term accuracy but won't move revenue on its own, hence its place at the bottom.
+
+| # | Recommendation | Why It Matters | Owner |
+|---|---|---|---|
+| 1 | Launch reactivation campaigns targeting customers acquired during the 2020 peak; investigate root cause (competition, marketing spend, market conditions). | Sales fell 44.1% YoY in 2022, driven by fewer orders, not a falling AOV | Marketing & Retention |
+| 2 | Keep investing in loyalty acquisition; investigate the drivers behind Loyalty's elevated refund rate before scaling further. | Adoption overtook Non-Loyalty by 2021, but members refund nearly 2x more (10.80% vs. 5.71%) | Loyalty/Retention & Finance |
+| 3 | Prioritize return-reason tracking and fulfillment review for laptop SKUs, where revenue impact per refund is highest. | Laptops carry 17%+ refund rates despite low order volume | Fulfillment & Product Quality |
+| 4 | Use regional and product performance as a starting point for deeper investigation into underperforming regions (EMEA, APAC, LATAM), and prioritize inventory and marketing spend behind the top three products. | North America drives the large majority of Sales and Orders; the Gaming Monitor, AirPods, and MacBook Air lead Sales while AirPods alone leads Orders | Regional Sales & Merchandising |
+| 5 | Prioritize the desktop checkout experience for big-ticket conversion; keep the mobile app frictionless for accessory purchases. | High-ticket items sell on desktop, accessories drive mobile app volume | E-commerce/UX |
+| 6 | Audit the ETL pipeline behind `REFUNDED`; add monitoring alerts for any metric that goes flat to zero for multiple months. | Refund tracking silently dropped to 0% after July 2021 | Data Engineering |
+
+## Data Quality & Limitations
 
 ## Dashboard Preview
 
@@ -194,7 +204,7 @@ The workbook is organized into four dashboards, connected by a persistent naviga
 3. **Deep Dive: Refund Rate** — refund rate overall and broken down by loyalty status, purchase platform, marketing channel, and product, with a visible callout for the refund-tracking data gap.
 4. **Deep Dive: Region** — Sales/AOV/Orders and refund rate broken down by geographic region, including a transparent note on how orders with missing region data were handled.
 
-## Dataset Structure and ERD (Entity relationship diagram)
+## Dataset Structure and ERD (Entity-Relationship Diagram)
 
 The underlying relational database consists of four tables (`orders`, `customers`, `order_status`, and `geo_lookup`) joined on customer and order IDs:
 
