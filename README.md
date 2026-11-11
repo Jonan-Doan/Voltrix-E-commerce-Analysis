@@ -238,16 +238,6 @@ For analysis, these were flattened into a single order-line-level table, `orders
 | 98 corrupted Order IDs | Minor; could affect order-level joins | Flagged for transparency; not excluded from totals |
 | Duplicate Count calculation inconsistency | Small, unresolved discrepancy between two derivations that should mathematically match | Doesn't change the direction of any finding; open item for further investigation |
 
-## Repo Contents
-
-| File | Description |
-|---|---|
-| `README.md` | This file |
-| `Elist_Tableau_Data_Sourced.xlsx` | Raw source data |
-| SQL script | *Coming soon* — BigQuery queries used for exploratory analysis |
-| ER diagram | *Coming soon* |
-| Data cleaning file (Excel) | *Coming soon* |
-
 ## Tech Stack & Tools
 * **Data Visualization:** Tableau Public (calculated fields, parameters, LOD expressions, dashboard actions)
 * **Data Cleaning & Preprocessing:** Excel (initial cleaning pass before loading into Tableau)
